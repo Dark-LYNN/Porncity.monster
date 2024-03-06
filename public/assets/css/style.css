@@ -1,2 +1,13 @@
     @import url('https://akira.lynnux.xyz/assets/css/main.css');
     @import url('https://akira.lynnux.xyz/assets/css/style.css');
+
+    .Notfound_not-found-button__M59dr {
+        border: none;
+        background-color: #EF0770 !important;
+        padding: 9px 30px;
+        color: #fff;
+        border-radius: 20px;
+        transition: all .3s;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
