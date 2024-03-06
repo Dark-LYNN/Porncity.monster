@@ -40,7 +40,7 @@ const Custom404 = () => {
 
             {/* Your HTML content goes here */}
             <div className="Notfound_container___vm_Q">
-                <Img style={PaddingBottom} width="500" height="500"src="https://cdn.lynnux.xyz/assets/svg/NotFound.svg" alt="not-found" className="Notfound_not-found-img__st0se" />
+                <Img style={PaddingBottom} width="500" height="500"src="/assets/images/svg/NotFound.svg" alt="not-found" className="Notfound_not-found-img__st0se" />
 
                 <h4 className="background-color: transparent;" style={PaddingBottom}>
                     The page you{"'"}re looking for can{"'"}t be found.
