@@ -5,7 +5,6 @@ import Script from 'next/script';
 import Img from 'next/image';
 
 import '../public/assets/css/style.css';
-import '../public/assets/css/main.css';
 
 const Custom404 = () => {
     const PaddingBottom: React.CSSProperties = {paddingBottom: "1rem"}
