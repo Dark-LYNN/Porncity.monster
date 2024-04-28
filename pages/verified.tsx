@@ -27,9 +27,6 @@ const Verified = () => {
                 <h1>Verification Successful</h1>
                 <p>You have been successfully verified!</p>
                 <p>Welcome to our community!</p>
-                <div className="footer">
-                    © 2024 Your Website or Company Name
-                </div>
             </div>
 
             <Script src="https://code.jquery.com/jquery-3.6.0.min.js"/>
