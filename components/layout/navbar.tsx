@@ -91,7 +91,7 @@ const Navbar = () => {
                                 <li className={styles.language}>
                                     <button type="button" className={styles.language__content} onClick={() => changeLanguage('en-US')}>
                                         <span className={styles.language__content__flag}>
-                                            <Image draggable="false" className={styles.emoji} height={1.25} width={1.25} alt="🇺🇸" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fa-1f1f8.svg"/>
+                                            <Image draggable="false" className={styles.emoji} height={1.25} width={1.25} alt="🇺🇸" src="https://cdn.lynnux.xyz/lynnux/Flags/Icon-Flag-US.png"/>
                                         </span>
                                         <span className={styles.language__content__name}>English</span>
                                     </button>
@@ -115,7 +115,7 @@ const Navbar = () => {
                                 <li className={styles.language}>
                                     <button type="button" className={styles.language__content} onClick={() => changeLanguage('nl-NL')}>
                                         <span className={styles.language__content__flag}>
-                                            <img draggable="false" className={styles.emoji} alt="🇳🇱" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1f1.svg"/>
+                                            <img draggable="false" className={styles.emoji} alt="🇳🇱" src="https://cdn.lynnux.xyz/lynnux/Flags/Icon-Flag-Netherlands.png"/>
                                         </span>
                                         <span className={styles.language__content__name}>Nederlands</span>
                                     </button>
