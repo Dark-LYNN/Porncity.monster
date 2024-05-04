@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import LoginButton from '@/components/interface/loginButton';
 import styles from '@styles/navbar.module.css'
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 
 const Navbar = () => {
@@ -46,7 +46,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <div className={styles.navbar__side}>
                 <Link href="/" aria-current="page" className={`${styles.navbar__icon} ${styles.nuxt_link_exact_active} ${styles.nuxt_link_active}`}>
-                    <img src="/assets/images/PornCity%20Logo.png" alt="Discord Bots logo" width="48"/>
+                    <Image src="/assets/images/PornCity%20Logo.png" alt="Discord Bots logo" height={48} width={48}/>
                 </Link>
                 <ul className={styles.navbar__links}>
                     <li className={`${styles.needs_exact} ${styles.navbar__link} ${styles.nuxt_link_active} ${styles.nuxt_link_exact_active}`}>
