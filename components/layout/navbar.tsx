@@ -45,18 +45,18 @@ const Navbar = () => {
     <>
         <nav className={styles.navbar}>
             <div className={styles.navbar__side}>
-                <a href="/" aria-current="page" className={`${styles.navbar__icon} ${styles.nuxt_link_exact_active} ${styles.nuxt_link_active}`}>
+                <Link href="/" aria-current="page" className={`${styles.navbar__icon} ${styles.nuxt_link_exact_active} ${styles.nuxt_link_active}`}>
                     <img src="/assets/images/PornCity%20Logo.png" alt="Discord Bots logo" width="48"/>
-                </a>
+                </Link>
                 <ul className={styles.navbar__links}>
                     <li className={`${styles.needs_exact} ${styles.navbar__link} ${styles.nuxt_link_active} ${styles.nuxt_link_exact_active}`}>
-                        <a href="/" rel="nofollow" className={styles.navbar__link__activator}>Home</a>
+                        <Link href="/" rel="nofollow" className={styles.navbar__link__activator}>Home</Link>
                     </li>
                     <li>
                         <Link locale="en-US" href={`https://discord.gg/${process.env.DISCORD_INVITE}`} rel="nofollow" className={`${styles.navbar__link} ${styles.navbar__link__activator}`}>Server</Link>
                     </li>
                     <li className={styles.navbar__link}>
-                        <a href="/about" rel="nofollow" className={styles.navbar__link__activator}>About</a>
+                        <Link href="/about" rel="nofollow" className={styles.navbar__link__activator}>About</Link>
                     </li>
                 </ul>
             </div>
@@ -145,7 +145,7 @@ const Navbar = () => {
                                     </button>
                                 </li>*/}
                                 <li className={styles.language}>
-                                    <a href="https://translate.bots.gg" className={styles.language__content}>
+                                    <a href="https://translate.lynnux.xyz" className={styles.language__content}>
                                         <span className={styles.language__content__flag}>
                                             <span role="img" aria-label="Plus icon" className="mdi mdi-plus">
                                                 <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
