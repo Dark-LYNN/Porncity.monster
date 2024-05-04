@@ -20,6 +20,8 @@ const LoginButton = () => {
 
     if (dropdownOpen) {
       document.addEventListener('click', closeDropdown as any);
+      console.log("NEXTAUTH_URL:", process.env.NEXTAUTH_URL);
+
     }
 
     return () => {
