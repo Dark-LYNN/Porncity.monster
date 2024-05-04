@@ -10,6 +10,7 @@ const authHandler: NextApiHandler = NextAuth({
       authorization: { params: { scope: 'identify email' } }
     })
   ],
+  
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async session({ session, token }) {
@@ -19,6 +20,7 @@ const authHandler: NextApiHandler = NextAuth({
       return session;
     }
   }
+  
 });
 
 export default authHandler;
