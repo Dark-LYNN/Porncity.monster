@@ -2,6 +2,7 @@ import styles from '@styles/navbar.module.css'
 import React, { useState, useEffect } from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 const LoginButton = () => {
   const { data: session } = useSession();
@@ -29,10 +30,12 @@ const LoginButton = () => {
   if (session && session.user) {
     return (
       <div style={{ position: 'relative' }} id="user-menu">
-        <img
+        <Image
           src={session.user.image ?? '/assets/images/default-avatar.png'}
           alt="User Avatar"
           style={{ width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer' }}
+          height={40}
+          width={40}
           onClick={toggleDropdown}
         />
         {dropdownOpen && (
