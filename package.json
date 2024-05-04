@@ -2,7 +2,7 @@
   "name": "porncity.monster",
   "version": "0.1.0",
   "engines": {
-    "node": "21.5.0"
+    "node": "20.12.2"
   },  
   "private": true,
   "scripts": {
