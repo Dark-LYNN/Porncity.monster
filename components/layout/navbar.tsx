@@ -91,7 +91,7 @@ const Navbar = () => {
                                 <li className={styles.language}>
                                     <button type="button" className={styles.language__content} onClick={() => changeLanguage('en-US')}>
                                         <span className={styles.language__content__flag}>
-                                            <img draggable="false" className={styles.emoji} alt="🇺🇸" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fa-1f1f8.svg"/>
+                                            <Image draggable="false" className={styles.emoji} height={1.25} width={1.25} alt="🇺🇸" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fa-1f1f8.svg"/>
                                         </span>
                                         <span className={styles.language__content__name}>English</span>
                                     </button>
@@ -107,7 +107,7 @@ const Navbar = () => {
                                 <li className={styles.language}>
                                     <button type="button" className={styles.language__content} onClick={() => changeLanguage('tr-TR')}>
                                         <span className={styles.language__content__flag}>
-                                            <img draggable="false" className={styles.emoji} alt="🇹🇷" src="https://em-content.zobj.net/source/twitter/376/flag-turkey_1f1f9-1f1f7.png"/>
+                                            <Image draggable="false" className={styles.emoji} height={1.25} width={1.25} alt="🇹🇷" src="https://cdn.lynnux.xyz/lynnux/Flags/Icon-Flag-Turkey.png"/>
                                         </span>
                                         <span className={styles.language__content__name}>Türkçe</span>
                                     </button>
