@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LoginButton from '@/components/interface/loginButton';
 import styles from '@styles/navbar.module.css'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+
+
 
 const Navbar = () => {
-    const router = useRouter();
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
 
+    const toggleMenuVisibility = () => {
+        setIsMenuVisible(!isMenuVisible);
+    };
     return (
     <>
         <nav className={styles.navbar}>
@@ -27,14 +31,97 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className={`${styles.navbar__side} ${styles.navbar__user}`}>
-                <span aria-label="Language" data-text="Language" className={`${styles.tooltip} ${styles.is_bottom}`}>
-                    <button type="button" className={`${styles.navbar__button} ${styles.is_circle} ${styles.has_regular_icon}`}>
+                <span aria-label={styles.language} data-text={styles.language} className={`${styles.tooltip} ${styles.is_bottom}`}>
+                    <button type="button" className={`${styles.navbar__button} ${styles.is_circle} ${styles.has_regular_icon}`} onClick={toggleMenuVisibility}>
                         <span role="img" aria-label="Translate icon" className={`${styles.mdi} ${styles.mdi_translate}`}>
                             <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z"></path>
                             </svg>
                         </span>
                     </button>
+                    {isMenuVisible && (
+                        <div className={`${styles.language__menu} ${isMenuVisible ? styles.visible : styles.hidden}`}>
+                            <ul className={styles.languages__list}>
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇸🇦" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1e6.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>العربية</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇩🇪" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>Deutsch</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇺🇸" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1fa-1f1f8.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>English</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇮🇹" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1f9.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>Italiano</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇳🇱" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1f1.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>Nederlands</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇵🇱" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1f1.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>Polski</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🏴&zwj;☠️" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3f4-200d-2620-fe0f.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>Pirate</span>
+                                    </button>
+                                </li>
+
+                                <li className={styles.language}>
+                                    <button type="button" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <img draggable="false" className={styles.emoji} alt="🇷🇺" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f7-1f1fa.svg"/>
+                                        </span>
+                                        <span className={styles.language__content__name}>Русский</span>
+                                    </button>
+                                </li>
+                                <li className={styles.language}>
+                                    <a href="https://translate.bots.gg" className={styles.language__content}>
+                                        <span className={styles.language__content__flag}>
+                                            <span role="img" aria-label="Plus icon" className="mdi mdi-plus">
+                                                <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"></path>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                        <span className={styles.language__content__name}>Contributeㅤ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    )}
                 </span>
                 <LoginButton />
             </div>
@@ -49,7 +136,7 @@ const Navbar = () => {
                     </span>
                 </button>
             </div>
-            <span aria-label="Language" data-text="Language" className={`${styles.tooltip} ${styles.navbar__language__mobile} ${styles.is_left}`}>
+            <span aria-label={styles.language} data-text={styles.language} className={`${styles.tooltip} ${styles.navbar__language__mobile} ${styles.is_left}`}>
                 <button type="button" className={`${styles.navbar__button} ${styles.is_circle} ${styles.has_regular_icon}`}>
                     <span role="img" aria-label="Translate icon" className={`${styles.mdi} ${styles.mdi_translate}`}>
                         <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -60,12 +147,6 @@ const Navbar = () => {
             </span>
         </nav>
     </>
-/*        <nav className={styles.navbar}>
-            <h1 className={styles.navTitle}>My App</h1>
-            <div className={styles.loginSection}>
-                <LoginButton />
-            </div>
-        </nav>*/
     );
 };
 

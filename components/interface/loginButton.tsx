@@ -1,3 +1,4 @@
+import styles from '@styles/navbar.module.css'
 import React, { useState, useEffect } from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
@@ -46,7 +47,7 @@ const LoginButton = () => {
   }
 
   return (
-    <button onClick={() => signIn('discord')}>Sign in with Discord</button>
+    <a onClick={() => signIn('discord')} className={styles.navbar__button}>Login</a>
   );
 };
 
