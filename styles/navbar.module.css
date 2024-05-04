@@ -1,7 +1,7 @@
 /* styles/Navbar.module.css */
 
 .navbar {
-    background: #14171e;
+    background: #1A1A1A;
     display: grid;
     grid-auto-flow: column;
     height: 64px;
@@ -239,14 +239,19 @@ button.navbar__button {
 * Language selector
 */
 
-.language__menu {
+.language__menu, .profile__menu {
     padding: 0;
 }
 
-.language__menu {
+.language__menu, .profile__menu {
     transition: opacity 0.5s ease-in-out, visibility 0.5s;
     opacity: 0;
     visibility: hidden;
+}
+
+.profile__menu.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .language__menu.visible {
@@ -254,13 +259,20 @@ button.navbar__button {
     visibility: visible;
 }
 
-.language__menu.hidden {
+.profile__menu.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
-.language__menu, .notifications__menu {
-    background: #1f232e;
+.language__menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.profile_menu {
+    z-index: 9002 !important;
+}
+.language__menu, .notifications__menu, .profile_menu {
+    background: #605E60;
     border-radius: 8px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
     color: #fff;
@@ -272,10 +284,21 @@ button.navbar__button {
     z-index: 9000;
 }
 
+.profile__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .languages__list, .notifications__list {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.profile__menu .profile {
+    padding: 0;
+    white-space: nowrap;
 }
 
 .language__menu .language {
@@ -283,8 +306,35 @@ button.navbar__button {
     white-space: nowrap;
 }
 
+.profile, .notification {
+    align-items: center;
+}
+
 .language, .notification {
     align-items: center;
+}
+
+.profile__menu .profile .profile__content {
+    align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    text-transform: none;
+    width: 100%;
 }
 
 .language__menu .language .language__content {
@@ -310,8 +360,19 @@ button.navbar__button {
     width: 100%;
 }
 
+.profile__menu .profile .profile__content__img, .profile__menu .profile .profile__content__img>span {
+    display: flex;
+}
+
 .language__menu .language .language__content__flag, .language__menu .language .language__content__flag>span {
     display: flex;
+}
+
+img.img {
+    height: 1.25em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.2em;
+    width: 1.25em;
 }
 
 img.emoji {
@@ -319,6 +380,12 @@ img.emoji {
     margin: 0 0.05em 0 0.1em;
     vertical-align: -0.2em;
     width: 1.25em;
+}
+
+.profile__menu .profile .profile__content .profile__content__name {
+    flex: 1;
+    margin-left: 1rem;
+    text-align: left;
 }
 
 .language__menu .language .language__content .language__content__name {

@@ -5,8 +5,20 @@ const nextConfig = {
         defaultLocale: 'en-US',
         localeDetection: false,
     },
+    
     images: {
-        domains: ['cdn.discordapp.com', 'cdn.lynnux.xyz'],
+        remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'cdn.discordapp.com',
+            // port: '443',   Use a port   
+            // pathname: '/images/*', Use path name
+            },
+            {
+              protocol: 'https',
+              hostname: 'cdn.lynnux.xyz',
+            },
+        ],
     },
 };
 
