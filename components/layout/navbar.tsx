@@ -4,12 +4,14 @@ import LoginButton from '@/components/interface/loginButton';
 import styles from '@styles/navbar.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 
 const Navbar = () => {
     const router = useRouter();
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const toggleButtonRef = useRef<HTMLButtonElement>(null);
+    const { t } = useTranslation('common');
 
     const toggleMenuVisibility = () => {
         setIsMenuVisible(!isMenuVisible);
@@ -50,13 +52,13 @@ const Navbar = () => {
                 </Link>
                 <ul className={styles.navbar__links}>
                     <li className={`${styles.needs_exact} ${styles.navbar__link} ${styles.nuxt_link_active} ${styles.nuxt_link_exact_active}`}>
-                        <Link href="/" rel="nofollow" className={styles.navbar__link__activator}>Home</Link>
+                        <Link href="/" rel="nofollow" className={styles.navbar__link__activator}>{t('Home')}</Link>
                     </li>
                     <li>
-                        <Link locale="en-US" href={`https://discord.gg/${process.env.DISCORD_INVITE}`} rel="nofollow" className={`${styles.navbar__link} ${styles.navbar__link__activator}`}>Server</Link>
+                        <Link locale="en-US" href={`https://discord.gg/${process.env.DISCORD_INVITE}`} rel="nofollow" className={`text-white ${styles.navbar__link} ${styles.navbar__link__activator}`}>{t('Server')}</Link>
                     </li>
                     <li className={styles.navbar__link}>
-                        <Link href="/about" rel="nofollow" className={styles.navbar__link__activator}>About</Link>
+                        <Link href="/about" rel="nofollow" className={`${styles.navbar__link__activator}`} >{t('About')}</Link>
                     </li>
                 </ul>
             </div>
