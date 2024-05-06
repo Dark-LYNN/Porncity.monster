@@ -6,7 +6,7 @@ import galleryItems from '@/components/data/galleryItems';
 const RecentUploads: React.FC = () => {
   return (
     <div>
-      <h1>Recent Uploads</h1>
+      <h1 className='color-white text-center font-semibold'>Recent Uploads</h1>
       <GalleryComponent images={galleryItems} />
     </div>
   );
