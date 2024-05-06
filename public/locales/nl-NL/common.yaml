@@ -21,4 +21,8 @@ Terms and Conditions: "Algemene Voorwaarden"
 Page Not Found: "Pagina niet gevonden"
 The page you're looking for can't be found.: "Deze pagina kan niet gevonden worden."
 Home: "Home Pagine"
- 
+
+# @/pages/tailwind-example.tsx
+Click Me: "Klik hier"
+Tailwind CSS Example: "Tailwind CSS Voorbeeld"
+This is a to see if Tailwind CSS is working: "Dit is een om te zien of Tailwind CSS werkt."

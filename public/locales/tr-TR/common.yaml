@@ -21,4 +21,8 @@ Terms and Conditions: "Şartlar ve koşullar"
 Page Not Found: "Sayfa Bulunamadı"
 The page you're looking for can't be found.: "Aradığınız sayfa bulunamadı."
 Home: "Ana Sayfa"
- 
+
+# @/pages/tailwind-example.tsx
+Click Me: "Beni Tıkla"
+Tailwind CSS Example: "Tailwind CSS Örneği"
+This is a to see if Tailwind CSS is working: "Bu, Tailwind CSS'nin çalışıp çalışmadığını görmek içindir."

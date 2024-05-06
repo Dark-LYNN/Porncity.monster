@@ -23,3 +23,7 @@ Page Not Found: "Page Not Found"
 The page you're looking for can't be found.: "The page you're looking for can't be found."
 Home: "Home Page"
 
+# @/pages/tailwind-example.tsx
+Click Me: "Click Me"
+Tailwind CSS Example: "Tailwind CSS Example"
+This is a to see if Tailwind CSS is working: "This is a to see if Tailwind CSS is working."
