@@ -5,10 +5,11 @@
     "node": ">=20.12.2"
   },
   "private": true,
-  "type": "commonjs",
+
   "scripts": {
+    "build:tailwind": "ts-node tailwind.config.ts",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:tailwind && next build",
     "start": "next start",
     "lint": "next lint"
   },
