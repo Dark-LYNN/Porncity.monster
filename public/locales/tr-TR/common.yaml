@@ -6,6 +6,8 @@ Sign Out: "Oturumu Kapat"
 Settings: "Ayarlar"
 Profile: "Profil"
 Login: "Oturum açma"
+About: "Hakkımızda"
+Server: "Sunucu"
 
 # @/components/layout/footer.tsx
 Description: "PornCity, Discord platformu içinde benzersiz ve kapsamlı bir yetişkin içerik dağıtım ağı olarak faaliyet gösteren sadece yetişkinlere yönelik bir Discord topluluğudur. Ağ, çeşitli ilgi alanlarına ve türlere özgü birden çok bağlantılı sunucudan oluşur ve yetişkin içerik tutkunları için kapsayıcı bir ortamı teşvik eder."
