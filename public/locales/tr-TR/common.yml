@@ -1,6 +1,23 @@
 # public/locales/tr-TR/common.yaml
 
+# @/components/layout/navbar.tsx
+Sign Out: "Oturumu Kapat"
+Settings: "Ayarlar"
+Profile: "Profil"
+Login: "Oturum açma"
+
+# @/components/layout/footer.tsx
+Description: "PornCity, Discord platformu içinde benzersiz ve kapsamlı bir yetişkin içerik dağıtım ağı olarak faaliyet gösteren sadece yetişkinlere yönelik bir Discord topluluğudur. Ağ, çeşitli ilgi alanlarına ve türlere özgü birden çok bağlantılı sunucudan oluşur ve yetişkin içerik tutkunları için kapsayıcı bir ortamı teşvik eder."
+Drop us a message: "Bize mesaj bırakın"
+HOME PAGE: "ANA SAYFA"
+BLOG: "İLETİŞİM"
+FAQ: "FAQ"
+Join as affiliate: "Satış ortağı olarak katılın"
+Privacy Policy: "Gizlilik Politikası"
+Terms and Conditions: "Şartlar ve koşullar"
+
 # @/pages/404.tsx
 Page Not Found: "Sayfa Bulunamadı"
 The page you're looking for can't be found.: "Aradığınız sayfa bulunamadı."
 Home: "Ana Sayfa"
+ 

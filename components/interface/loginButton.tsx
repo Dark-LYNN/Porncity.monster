@@ -98,14 +98,8 @@ const LoginButton = () => {
   }
 
   return (
-    <a onClick={() => signIn('discord')} className={styles.navbar__button}>Login</a>
+    <a onClick={() => signIn('discord')} className={styles.navbar__button}>{t('Login')}</a>
   );
 };
 
 export default LoginButton;
-/*
-<a href="/profile" style={{ padding: '12px', display: 'block', textDecoration: 'none', color: 'black' }}>{t('Profile')}</a>
-<a href="/settings" style={{ padding: '12px', display: 'block', textDecoration: 'none', color: 'black' }}>{t('Settings')}</a>
-<button onClick={() => signOut()} style={{ padding: '12px', display: 'block', width: '100%', textAlign: 'left', border: 'none', backgroundColor: 'white' }}>{t('Sign Out')}</button>
-
-*/

@@ -1,6 +1,23 @@
 # public/locales/en-US/common.yaml
 
+# @/components/layout/navbar.tsx
+Sign Out: "Sign Out"
+Settings: "Settings"
+Profile: "Profile"
+Login: "Login"
+
+# @/components/layout/footer.tsx
+Description: "PornCity is an adult-only Discord community that operates as a unique and comprehensive adult content distribution network within the Discord platform. The network comprises multiple interconnected servers, each tailored to various interests and genres, fostering an inclusive environment for adult content enthusiasts."
+Drop us a message: "Drop us a message"
+HOME PAGE: "HOME PAGE"
+BLOG: "BLOG"
+FAQ: "FAQ"
+Join as affiliate: "Join as affiliate"
+Privacy Policy: "Privacy Policy"
+Terms and Conditions: "Terms and Conditions"
+
 # @/pages/404.tsx
 Page Not Found: "Page Not Found"
 The page you're looking for can't be found.: "The page you're looking for can't be found."
 Home: "Home Page"
+

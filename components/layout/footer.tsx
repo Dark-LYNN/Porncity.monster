@@ -1,13 +1,16 @@
 // @/components/layour/footer.tsx
 import { useTranslation } from 'next-i18next';
+import React, { useState } from 'react';
 import LocalizedLink from '@/components/interface/LocalizedLink';
 import styles from '@styles/footer.module.css'
 import Link from 'next/link'; 
 import Image from 'next/image';
 
-const Footer = () => {
-    const { t } = useTranslation('common');
 
+const Footer = () => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { t } = useTranslation('common');
+  
     return (
         <>
             <footer className={styles.footer}>
@@ -71,7 +74,7 @@ const Footer = () => {
                             <h3>Contact Us</h3>
                             <ul id={styles.menu_footer_menu} className={styles.menu}>
                                 <li>
-                                    <LocalizedLink className={styles.link_a} href="./contact/">Drop us a message</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="./contact/">{t('Drop us a message')}</LocalizedLink>
                                 </li>
                             </ul>
                         </article>
@@ -80,22 +83,22 @@ const Footer = () => {
                         <div className={styles.menu_footer_menu_container}>
                             <ul id={styles.menu_footer_menu} className={styles.menu}>
                                 <li id={styles.menu_item_370} className={`${styles.menu_item} ${styles.menu_item_type_post_type} ${styles.menu_item_object_page} ${styles.menu_item_363}`}>
-                                    <LocalizedLink className={styles.link_a} href="/">Homepage</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="/">{t('HOME PAGE')}</LocalizedLink>
                                 </li>
                                 <li id={styles.menu_item_362} className={`${styles.menu_item} ${styles.menu_item_type_post_type} ${styles.menu_item_object_page} ${styles.menu_item_363}`}>
-                                    <LocalizedLink className={styles.link_a} href="/blogs/">BLOG</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="/blogs/">{t('BLOG')}</LocalizedLink>
                                 </li>
                                 <li id={styles.menu_item_361} className={`${styles.menu_item} ${styles.menu_item_type_post_type} ${styles.menu_item_object_page} ${styles.menu_item_363}`}>
-                                    <LocalizedLink className={styles.link_a} href="/faq/">FAQ</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="/faq/">{t('FAQ')}</LocalizedLink>
                                 </li>
                                 <li id={styles.menu_item_369} className={`${styles.menu_item} ${styles.menu_item_type_post_type} ${styles.menu_item_object_page} ${styles.menu_item_363}`}>
-                                    <LocalizedLink className={styles.link_a} href="/aff/signup">Join as affiliate</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="/aff/signup">{t('Join as affiliate')}</LocalizedLink>
                                 </li>
                                 <li id={styles.menu_item_1964} className={`${styles.menu_item} ${styles.menu_item_type_post_type} ${styles.menu_item_object_page} ${styles.menu_item_1964}`}>
-                                    <LocalizedLink className={styles.link_a} href="/privacy-policy/">Privacy Policy</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="/privacy-policy/">{t('Privacy Policy')}</LocalizedLink>
                                 </li>
                                 <li id={styles.menu_item_1966} className={`${styles.menu_item} ${styles.menu_item_type_post_type} ${styles.menu_item_object_page} ${styles.menu_item_1966}`}>
-                                    <LocalizedLink className={styles.link_a} href="/terms-and-conditions/">Terms and Conditions</LocalizedLink>
+                                    <LocalizedLink className={styles.link_a} href="/terms-and-conditions/">{t('Terms and Conditions')}</LocalizedLink>
                                 </li>
                             </ul>
                         </div>
