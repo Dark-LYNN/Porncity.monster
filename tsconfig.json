@@ -1,35 +1,28 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom","dom.iterable","esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "target": "ES6",
     "strict": true,
     "typeRoots": ["./node_modules/@types", "./types"],
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "baseUrl": ".",
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
+    "types": ["node"],
+    "plugins": [{"name": "next"}],
+    "paths": { 
       "@/*": ["./*"],
       "@styles/*": ["./styles/*"],
       "@components/*": ["./components/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "types/tailwindcss.d.ts"],
+  "exclude": ["node_modules", ".next"]
 }
