@@ -408,3 +408,66 @@ img.emoji {
     -webkit-text-decoration: none;
     text-decoration: none;
 }
+
+.navbarButton {
+    background-color: #ff47ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbarButton:hover {
+    background-color: #ff65ff;
+  }
+  
+  /* User menu dropdown styles */
+  .userMenuDropdown {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  
+  .userMenuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .userMenuItem {
+    padding: 0;
+  }
+  
+  .userMenuButton {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+    background-color: var();
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .userMenuButton:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .userMenuIcon {
+    margin-right: 8px;
+  }
+  
+  .userMenuText {
+    font-size: 14px;
+  }
+  
