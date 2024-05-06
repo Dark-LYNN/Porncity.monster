@@ -2,19 +2,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config) => {
+    // Support for YAML files
     config.module.rules.push({
       test: /\.yaml$/,
       use: 'yaml-loader',
     });
-    /*  // tailwind
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader']
-    });
-    */
+
     return config;
   },
-
   i18n: {
     locales: ['en-US', 'nl-NL', 'tr-TR'],
     defaultLocale: 'en-US',
