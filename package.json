@@ -2,7 +2,7 @@
   "name": "porncity.monster",
   "version": "0.1.0",
   "engines": {
-    "node": ">=20.12.2" 
+    "node": ">=20.12.2"
   },
   "private": true,
   "scripts": {
@@ -36,6 +36,7 @@
     "postcss-nested": "^6.0.1",
     "postcss-preset-env": "^9.5.11",
     "tailwindcss": "^3.4.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
