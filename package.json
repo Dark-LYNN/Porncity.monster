@@ -7,7 +7,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:tailwind": "ts-node --loader ts-node/esm tailwind.config.ts",
+    "build:tailwind": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"CommonJS\"}' ts-node tailwind.config.ts",
     "dev": "next dev",
     "build": "npm run build:tailwind && next build",
     "start": "next start",
