@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="language" content="en" />
         <link rel="canonical" href={canonical} />
-
+        <title>{title}</title>
         {/* Embedding */}
         <meta name="theme-color" content="#ff47ff" />
         <meta property="og:site_name" content="https://porncity.monster/" />
