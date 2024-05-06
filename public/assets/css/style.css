@@ -11,8 +11,13 @@
     --primary-lightest-color: #F9F2F8;
 
     --secondary-color: #605E60;
+    --secondary-color-80: #605E6080;
+    --secondary-color-60: #605E6060;
+    --secondary-color-50: #605E6050;
+    --secondary-color-30: #605E6030;
+    --secondary-color-10: #605E6010;
     --secondary-darker-color: #1A1A1A;
-    --secondary-lighter-color: #8E87EA;
+    --secondary-lighter-color: #8E878A;
     --secondary-light-color: #BAAEB3;
     --secondary-lightest-color: #E5DADF;
 
@@ -21,7 +26,7 @@
     --background-color: #333333;
 }
 
-body {
+body { 
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;

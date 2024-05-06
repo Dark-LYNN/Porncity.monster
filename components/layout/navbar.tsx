@@ -46,19 +46,19 @@ const Navbar = () => {
     return (
     <>
         <nav className={styles.navbar}>
-            <div className={styles.navbar__side}>
+            <div className={`${styles.pl_35} ${styles.navbar__side}`}>
                 <Link href="/" aria-current="page" className={`${styles.navbar__icon} ${styles.nuxt_link_exact_active} ${styles.nuxt_link_active}`}>
                     <Image src="/assets/images/PornCity%20Logo.png" alt="Discord Bots logo" height={48} width={48}/>
                 </Link>
                 <ul className={styles.navbar__links}>
                     <li className={`${styles.needs_exact} ${styles.navbar__link} ${styles.nuxt_link_active} ${styles.nuxt_link_exact_active}`}>
-                        <Link href="/" rel="nofollow" className={styles.navbar__link__activator}>{t('Home')}</Link>
+                        <Link href="/" rel="nofollow" className={`${styles.hover_link} ${styles.navbar__link__activative}`}>{t('Home')}</Link>
                     </li>
-                    <li>
-                        <Link locale="en-US" href={`https://discord.gg/${process.env.DISCORD_INVITE}`} rel="nofollow" className={`text-white ${styles.navbar__link} ${styles.navbar__link__activator}`}>{t('Server')}</Link>
+                    <li className={`${styles.navbar__link} ${styles.hover_link}`}>
+                        <Link locale="en-US" href={`https://discord.gg/${process.env.DISCORD_INVITE}`} rel="nofollow" className={`text-white ${styles.hover_link} ${styles.navbar__link} ${styles.navbar__link__activator}`}>{t('Server')}</Link>
                     </li>
-                    <li className={styles.navbar__link}>
-                        <Link href="/about" rel="nofollow" className={`${styles.navbar__link__activator}`} >{t('About')}</Link>
+                    <li className={`${styles.navbar__link} ${styles.hover_link}`}>
+                        <Link href="/about" rel="nofollow" className={`text-white ${styles.hover_link} ${styles.navbar__link} ${styles.navbar__link__activator}`} >{t('About')}</Link>
                     </li>
                 </ul>
             </div>
