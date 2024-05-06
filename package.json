@@ -5,6 +5,7 @@
     "node": ">=20.12.2"
   },
   "private": true,
+  "type": "module",
   "scripts": {
     "build:tailwind": "ts-node tailwind.config.ts",
     "dev": "next dev",
