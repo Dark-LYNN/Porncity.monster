@@ -1,4 +1,6 @@
-import type { Config } from "tailwindcss";
+// tailwind.config.ts
+
+import { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -37,4 +39,5 @@ const config: Config = {
   },
   plugins: [],
 };
-module.exports = config;
+
+export default config;
