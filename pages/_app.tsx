@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const page = pageProps.__NEXT_DATA__?.page || '/';
   const pathname = typeof page === 'string' ? page : '/';
   const pageTitle = pathname.charAt(1).toUpperCase() + pathname.slice(2) || 'Home';
-  const title = `PornDB | ${pageTitle}`;
+  const title = `PornDB`; // | ${pageTitle}
   const is404Page = pathname === '/404';
   const isHomePage = pathname === '/';
   const canonical = `https://porncity.monster${pathname}`;
