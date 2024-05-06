@@ -1,5 +1,7 @@
 # public/locales/en-US/common.yaml
 
+example: "Example"
+
 # @/components/layout/navbar.tsx
 Sign Out: "Sign Out"
 Settings: "Settings"

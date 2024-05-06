@@ -1,5 +1,6 @@
 # public/locales/en-US/common.yaml
 
+example: "dit is een test"
 # @/components/layout/navbar.tsx
 Sign Out: "Uitloggen"
 Settings: "Instellingen"
