@@ -1,0 +1,6 @@
+# public/locales/en-US/common.yaml
+
+# @/pages/404.tsx
+Page Not Found: "Pagina niet gevonden"
+The page you're looking for can't be found.: "Deze pagina kan niet gevonden worden."
+Home: "Home Pagine"

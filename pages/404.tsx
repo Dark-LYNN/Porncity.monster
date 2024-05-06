@@ -1,66 +1,36 @@
-import $ from 'jquery';
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
+// @/pages/404.tsx
+import React from 'react';
+import { GetStaticProps } from 'next';
 import Img from 'next/image';
-
-import '../public/assets/css/style.css';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import LocalizedLink from '@/components/interface/LocalizedLink';
+import styles from '@styles/404.module.css'
 
 const Custom404 = () => {
-    const PaddingBottom: React.CSSProperties = {paddingBottom: "1rem"}
-
+    const { t } = useTranslation('common');
+    const PaddingBottom: React.CSSProperties = { paddingBottom: "1rem" };
+  
     return (
-        <>
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YSD2Q72W1H"/>
+        < >
+            <div className={styles.body}>
+                <div className={styles.container}>
+                    <Img style={PaddingBottom} width="500" height="500" src="/assets/images/svg/NotFound.svg" alt="not-found" className={styles.img} />
 
-            <Head>
-                {/* Main */}
-                <title>404 - Page Not Found</title>
-                <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png"/>
-                <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png"/>
-                <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png"/>
-                <link rel="manifest" href="/assets/images/site.webmanifest"/>
-                {/* Meta tags */}
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            </Head>
-
-            {/* Your HTML content goes here */}
-            <div className="Notfound_container___vm_Q">
-                <Img style={PaddingBottom} width="500" height="500"src="/assets/images/svg/NotFound.svg" alt="not-found" className="Notfound_not-found-img__st0se" />
-
-                <h4 className="background-color: transparent;" style={PaddingBottom}>
-                    The page you{"'"}re looking for can{"'"}t be found.
-                </h4>
-                <button onClick={() => window.location.href='/'} className="Notfound_not-found-button__M59dr">Home</button>
+                    <h4 className={styles.h1} style={{ backgroundColor: 'transparent', paddingBottom: '1rem' }}>
+                        {t("The page you're looking for can't be found.")}
+                    </h4>
+                    <LocalizedLink className={styles.button} href="/">{t('Home')}</LocalizedLink>
+                </div>
             </div>
-
-            <Script src="https://code.jquery.com/jquery-3.6.0.min.js"/>
         </>
     );
 }
 
-export default Custom404;
-
-/*
-⣿⡟⠙⠛⠋⠩⠭⣉⡛⢛⠫⠭⠄⠒⠄⠄⠄⠈⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⡇⠄⠄⠄⠄⣠⠖⠋⣀⡤⠄⠒⠄⠄⠄⠄⠄⠄⠄⠄⠄⣈⡭⠭⠄⠄⠄⠉⠙
-⣿⡇⠄⠄⢀⣞⣡⠴⠚⠁⠄⠄⢀⠠⠄⠄⠄⠄⠄⠄⠄⠉⠄⠄⠄⠄⠄⠄⠄⠄
-⣿⡇⠄⡴⠁⡜⣵⢗⢀⠄⢠⡔⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⣿⡇⡜⠄⡜⠄⠄⠄⠉⣠⠋⠠⠄⢀⡄⠄⠄⣠⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸
-⣿⠸⠄⡼⠄⠄⠄⠄⢰⠁⠄⠄⠄⠈⣀⣠⣬⣭⣛⠄⠁⠄⡄⠄⠄⠄⠄⠄⢀⣿
-⣏⠄⢀⠁⠄⠄⠄⠄⠇⢀⣠⣴⣶⣿⣿⣿⣿⣿⣿⡇⠄⠄⡇⠄⠄⠄⠄⢀⣾⣿
-⣿⣸⠈⠄⠄⠰⠾⠴⢾⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁⣾⢀⠁⠄⠄⠄⢠⢸⣿⣿
-⣿⣿⣆⠄⠆⠄⣦⣶⣦⣌⣿⣿⣿⣿⣷⣋⣀⣈⠙⠛⡛⠌⠄⠄⠄⠄⢸⢸⣿⣿
-⣿⣿⣿⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠈⠄⠄⠄⠄⠄⠈⢸⣿⣿
-⣿⣿⣿⠄⠄⠄⠘⣿⣿⣿⡆⢀⣈⣉⢉⣿⣿⣯⣄⡄⠄⠄⠄⠄⠄⠄⠄⠈⣿⣿
-⣿⣿⡟⡜⠄⠄⠄⠄⠙⠿⣿⣧⣽⣍⣾⣿⠿⠛⠁⠄⠄⠄⠄⠄⠄⠄⠄⠃⢿⣿
-⣿⡿⠰⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠩⠔⠒⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠘⣿
-⣿⠃⠃⠄⠄⠄⠄⠄⠄⣀⢀⠄⠄⡀⡀⢀⣤⣴⣤⣤⣀⣀⠄⠄⠄⠄⠄⠄⠁⢹⠀
-⣿⣿⣿⠏⠉⠉⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⠀⠀⢀⣿⣿⣿⠿⠿⢿⠿⠿⢿⠿⠿⠿⠿⠿⣿⣿⠿⠿⠿⠿⠿⣿⣿⣿
-⣿⣿⡟⠀⠀⣸⣿⣿⡏⠀⠀⣿⠀⠀⣸⠀⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⠀⣹⣿⣿⣿⣿
-⣿⣿⡇⠀⠀⠛⠛⠛⡇⠀⠀⠇⠀⠀⡟⠀⠀⡞⠀⠀⠼⠇⠀⠀⡇⠀⠀⢿⣿⣿⣿⣿
-⣿⣿⡃⠀⠀⠀⠀⢠⡇⠀⠀⠀⠀⢀⣇⣀⣀⣧⡀⠀⣀⣀⣀⣠⣆⠀⠀⣸⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠈⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-*/
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en-US', ['common'])),
+    },
+  });
+  
+  export default Custom404;

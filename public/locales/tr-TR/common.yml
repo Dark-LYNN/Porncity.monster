@@ -1,0 +1,6 @@
+# public/locales/tr-TR/common.yaml
+
+# @/pages/404.tsx
+Page Not Found: "Sayfa Bulunamadı"
+The page you're looking for can't be found.: "Aradığınız sayfa bulunamadı."
+Home: "Ana Sayfa"

@@ -1,7 +1,8 @@
+// @/components/layour/footer.tsx
 import { useTranslation } from 'next-i18next';
 import LocalizedLink from '@/components/interface/LocalizedLink';
 import styles from '@styles/footer.module.css'
-import Link from 'next/link';
+import Link from 'next/link'; 
 import Image from 'next/image';
 
 const Footer = () => {
@@ -18,27 +19,27 @@ const Footer = () => {
                             </div>
                             <p className={styles.footerleftblock}>{t('Description')}</p>
                             <div className={styles.socials}>
-                                <Link href="https://twitter.com/Hentaied1" rel="nofollow">
+                                <Link href="https://twitter.com/CornDb" rel="nofollow">
                                     <Image width="32" height="32" loading="lazy" src="/assets/images/X_Porncity.svg" alt="Twitter"/>
                                 </Link>
-                                <a target="_blank" href="https://onlyfans.com/hentaied" rel="nofollow">
+                                <a target="_blank" href="https://onlyfans.com/corndb" rel="nofollow">
                                     <Image width="32" height="32" src="/assets/images/Onlyfans_Porncity.svg" loading="lazy" alt="Onlyfans"/>
                                 </a>
-                                <a target="_blank" href="https://discord.gg/ZYk94wqQJJ" rel="nofollow">
+                                <a target="_blank" href="https://discord.gg/porndb" rel="nofollow">
                                     <Image loading="lazy" width="32" height="32" src="/assets/images/Discord_Porncity.svg" alt="Discord"/>
                                 </a>
-                                <a href="https://www.instagram.com/gianthealien/" rel="nofollow">
+                                <a href="https://www.instagram.com/corndb/" rel="nofollow">
                                     <Image width="32" height="32" src="/assets/images/IG_Porncity.svg" loading="lazy" alt="instagram"/>
                                 </a>
-                                <a href="mailto:romero@hentaied.com">
+                                <a href="mailto:contact.lynnux@gmail.com">
                                     <Image width="32" height="32" src="/assets/images/Email_Porncity.svg" loading="lazy" alt="Contact"/>
                                 </a>
-                                <a target="_blank" href="https://bit.ly/41jLre">
+                            {/* <a target="_blank" href="https://bit.ly/41jLre">
                                     <Image loading="lazy" width="32" height="32" src="/assets/images/YT_Porncity.svg" alt="YouTube"/>
                                 </a>
-                                <a href="https://www.tiktok.com/@hentaied1">
+                                 <a href="https://www.tiktok.com/@hentaied1">
                                     <Image width="32" height="32" src="/assets/images/Tiktok_Porncity.svg" loading="lazy" alt="Tiktok"/>
-                                </a>
+                                </a>*/}
                             </div>
                         {/* <Image style={{marginTop:24}} className={styles.footer_img} width="500" height="76" src="/assets/images/Company-info.png" loading="lazy" alt="company details"/>*/}
                         </div>
@@ -100,7 +101,9 @@ const Footer = () => {
                         </div>
                     </article>
                 </section>
-            <div className={styles.copyright}>© 2023 <span className={styles.pinkie}>Porncity</span>. All rights reserved. {/*<span><img width="60" height="20" className="creditcardlogos" src="https://hentaied.com/wp-content/uploads/2022/07/creditcards.jpg" loading="lazy" alt="credit card logos"/></span>*/}</div> 
+                <br/>
+            <div className={`${styles.copyright} color-white text-center`}>© 2023 <span className={styles.pinkie}>Porncity</span>. All rights reserved. {/*<span><img width="60" height="20" className="creditcardlogos" src="https://hentaied.com/wp-content/uploads/2022/07/creditcards.jpg" loading="lazy" alt="credit card logos"/></span>*/}</div> 
+            <br/>
             </footer>
         </>
     );

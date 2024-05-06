@@ -25,7 +25,7 @@ const AgeVerification: React.FC = () => {
   // Instead of returning null, return hidden divs
   if (!isVisible) {
     return <div style={{ display: 'none' }}></div>;
-  }
+  } 
 
   return (
     <div className={styles.is_18}>
