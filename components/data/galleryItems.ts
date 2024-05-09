@@ -1,3 +1,4 @@
+// @/components/data/galleryItems.ts
 const galleryItems = [
     {
       src: 'https://via.placeholder.com/600x400',
@@ -18,7 +19,7 @@ const galleryItems = [
       caption: 'diam maecenas sed',
       date: 'May 4, 2024',
       description: 'vulputate ut pharetra sit amet',
-      tags: ['vulputate', 'eros', 'pharetra'],
+      tags: ['NSFW'],
       author: 'Lynnux'
     },
     {

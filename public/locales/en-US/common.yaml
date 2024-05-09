@@ -29,3 +29,8 @@ Home: "Home Page"
 Click Me: "Click Me"
 Tailwind CSS Example: "Tailwind CSS Example"
 This is a to see if Tailwind CSS is working: "This is a to see if Tailwind CSS is working."
+
+# @/components/modals/SettingsModal.tsx
+Settings: "Settings"
+Language: "Language"
+Blur NSFW images: "Blur NSFW images"

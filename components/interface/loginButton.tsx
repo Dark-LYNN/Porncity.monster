@@ -4,10 +4,12 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import styles from '@styles/navbar.module.css';
+import SettingsModal from '@/components/modals/SettingsModal';
 
 const LoginButton = () => {
   const { data: session } = useSession();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation('common');
 
@@ -37,34 +39,42 @@ const LoginButton = () => {
     };
   }, [dropdownOpen]);
 
+  const openSettings = () => setIsSettingsOpen(true);
+  const closeSettings = () => setIsSettingsOpen(false);
+
+
   const renderDropdown = () => (
-    <div className={styles.userMenuDropdown} id="user-popup">
-      <ul className={styles.userMenuList}>
-        <li className={styles.userMenuItem}>
-          <button type="button" className={styles.userMenuButton}>
-            <span className={styles.userMenuIcon}>
-              <Image draggable="false" src="/assets/images/member.png" height={20} width={20} alt="Profile Icon" />
-            </span>
-            <span className={styles.userMenuText}>{t('Profile')}</span>
-          </button>
-        </li>
-        <li className={styles.userMenuItem}>
-          <button type="button" className={styles.userMenuButton}>
-            <span className={styles.userMenuIcon}>
-              <Image draggable="false" src="/assets/images/settings.png" height={20} width={20} alt="Settings Icon" />
-            </span>
-            <span className={styles.userMenuText}>{t('Settings')}</span>
-          </button>
-        </li>
-        <li className={styles.userMenuItem}>
-          <button type="button" className={styles.userMenuButton}>
-            <span className={styles.userMenuIcon}>
-              <Image draggable="false" src="/assets/images/signout.png" height={20} width={20} alt="Sign Out Icon" />
-            </span>
-            <span onClick={() => signOut()} className={styles.userMenuText}>{t('Sign Out')}</span>
-          </button>
-        </li>
-      </ul>
+    <div>
+      <div className={styles.userMenuDropdown} id="user-popup">
+        <ul className={styles.userMenuList}>
+          <li className={styles.userMenuItem}>
+            <button type="button" className={styles.userMenuButton}>
+              <span className={styles.userMenuIcon}>
+                <Image draggable="false" src="/assets/images/member.png" height={20} width={20} alt="Profile Icon" />
+              </span>
+              <span className={styles.userMenuText}>{t('Profile')}</span>
+            </button>
+          </li>
+          <li className={styles.userMenuItem}>
+            <button type="button" className={styles.userMenuButton} onClick={openSettings}>
+              <span className={styles.userMenuIcon}>
+                <Image draggable="false" src="/assets/images/settings.png" height={20} width={20} alt="Settings Icon" />
+              </span>
+              <span className={styles.userMenuText}>{t('Settings')}</span>
+            </button>
+          </li>
+          <li className={styles.userMenuItem}>
+            <button type="button" className={styles.userMenuButton}>
+              <span className={styles.userMenuIcon}>
+                <Image draggable="false" src="/assets/images/signout.png" height={20} width={20} alt="Sign Out Icon" />
+              </span>
+              <span onClick={() => signOut()} className={styles.userMenuText}>{t('Sign Out')}</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <SettingsModal isOpen={isSettingsOpen} onClose={closeSettings} />
+
     </div>
   );
 

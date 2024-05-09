@@ -28,3 +28,8 @@ Home: "Ana Sayfa"
 Click Me: "Beni Tıkla"
 Tailwind CSS Example: "Tailwind CSS Örneği"
 This is a to see if Tailwind CSS is working: "Bu, Tailwind CSS'nin çalışıp çalışmadığını görmek içindir."
+
+# @/components/modals/SettingsModal.tsx
+Settings: "Ayarlar"
+Language: "Dil"
+Blur NSFW images: "NSFW görüntüleri bulanıklaştır"

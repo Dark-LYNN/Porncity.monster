@@ -28,3 +28,8 @@ Home: "Home Pagine"
 Click Me: "Klik hier"
 Tailwind CSS Example: "Tailwind CSS Voorbeeld"
 This is a to see if Tailwind CSS is working: "Dit is een om te zien of Tailwind CSS werkt."
+
+# @/components/modals/SettingsModal.tsx
+Settings: "Instellingen"
+Language: "Taal"
+Blur NSFW images: "NSFW afbeeldingen vervagen"
