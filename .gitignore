@@ -37,4 +37,6 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# custom added
 public/assets/css/output.css
